@@ -1,3 +1,6 @@
+# Project
+*.pdf
+
 # Python
 __pycache__/
 *.pyc
