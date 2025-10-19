@@ -1,4 +1,5 @@
-from employee.employee import Employee
+from ..employee import Employee
+
 class SalesStaff(Employee):
     """Sales employee with commission based on sales amount."""
 

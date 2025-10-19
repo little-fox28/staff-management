@@ -1,3 +1,4 @@
+from menu_logic import MenuHandler
 
 class Menu:
     def __init__(self):   

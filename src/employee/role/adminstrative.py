@@ -1,4 +1,5 @@
-from employee.employee import Employee
+from ..employee import Employee
+
 class AdminStaff(Employee):
     """Administrative staff class."""
 

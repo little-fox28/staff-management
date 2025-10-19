@@ -1,2 +1,5 @@
+from menu.menu_ui import Menu
+
 if __name__ == '__main__':
-    print("hello world")
+    menu = Menu()
+    menu.run()
