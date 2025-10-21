@@ -1,4 +1,4 @@
-from src.data import IStorage
+from src.data_handler import IStorage
 
 
 class CSVStorage(IStorage):
