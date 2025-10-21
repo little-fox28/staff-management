@@ -1,0 +1,12 @@
+[
+    {'type': 'SAL', 'full_name': 'Alice Smith', 'basic_salary': 5000000, 'sales_amount': 150000000, 'commission_rate': 0.1, 'role': 'HOD', 'responsibility_salary': 3000000},
+    {'type': 'SAL', 'full_name': 'Bob Johnson', 'basic_salary': 4500000, 'sales_amount': 120000000, 'commission_rate': 0.08},
+    {'type': 'SAL', 'full_name': 'Charlie Brown', 'basic_salary': 4800000, 'sales_amount': 200000000, 'commission_rate': 0.12},
+    {'type': 'SAL', 'full_name': 'Diana Prince', 'basic_salary': 5200000, 'sales_amount': 180000000, 'commission_rate': 0.11, 'role': 'HOD', 'responsibility_salary': 2500000},
+    {'type': 'SAL', 'full_name': 'Ethan Hunt', 'basic_salary': 4900000, 'sales_amount': 90000000, 'commission_rate': 0.09},
+    {'type': 'ADM', 'full_name': 'Fiona Glenanne', 'basic_salary': 6000000, 'role': 'HOD', 'responsibility_salary': 4000000},
+    {'type': 'ADM', 'full_name': 'George Costanza', 'basic_salary': 5500000},
+    {'type': 'ADM', 'full_name': 'Hannah Montana', 'basic_salary': 5800000},
+    {'type': 'ADM', 'full_name': 'Indiana Jones', 'basic_salary': 6200000},
+    {'type': 'ADM', 'full_name': 'Jack Sparrow', 'basic_salary': 5900000},
+]
