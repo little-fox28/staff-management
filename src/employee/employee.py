@@ -6,11 +6,11 @@ class Employee(ABC):
     Đại diện cho một nhân viên trong hệ thống quản lý.
     """
 
-    def __init__(self, emp_id: str, full_name: str, basic_salary: float, department_id: str = None):
+    def __init__(self, emp_id: str, full_name: str, basic_salary: float):
         self._id = emp_id
         self._full_name = full_name
         self._basic_salary = basic_salary
-        self._department_id = department_id
+        self._department_id = None
         self._role = None  # e.g., "HOD" (Head of Department)
 
     # --- Encapsulated properties ---

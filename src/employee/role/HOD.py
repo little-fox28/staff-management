@@ -1,13 +1,12 @@
 from ..employee import Employee
 
-class Manager(Employee):
-    """Manager with responsibility salary."""
+class HOD:
+    """Decorator to add HOD responsibilities to an employee."""
 
-    def __init__(self, emp_id: str, full_name: str, basic_salary: float,
-                 department_id: str = None, responsibility_salary: float = 0.0):
-        super().__init__(emp_id, full_name, basic_salary, department_id)
+    def __init__(self, employee: Employee, responsibility_salary: float = 0.0):
+        self._employee = employee
         self._responsibility_salary = responsibility_salary
-        self.role = "HOD"  # Head of Department
+        self._employee.role = "HOD"
 
     @property
     def responsibility_salary(self) -> float:
@@ -20,5 +19,9 @@ class Manager(Employee):
         self._responsibility_salary = value
 
     def get_income(self) -> float:
-        """Income = base salary + responsibility salary."""
-        return self.basic_salary + self.responsibility_salary
+        """Income = base income + responsibility salary."""
+        return self._employee.get_income() + self.responsibility_salary
+
+    def __getattr__(self, name):
+        """Delegate other attribute access to the wrapped employee."""
+        return getattr(self._employee, name)
