@@ -41,3 +41,7 @@ class Menu:
     def _exit_program(self):
         print("Cảm ơn bạn đã sử dụng chương trình. Tạm biệt!")
         exit()
+
+if __name__ == "__main__":
+    menu = Menu()
+    menu.run()
