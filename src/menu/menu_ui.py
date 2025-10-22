@@ -1,19 +1,19 @@
-from menu_logic import MenuHandler
+from src.menu.menu_handler import MenuHandler
 
 class Menu:
     def __init__(self):   
         self.menu_handler = MenuHandler()
         self.choices = {
-            "1": {"text": "Nhập thông tin nhân viên", "action": None },
-            "2": {"text": "Xuất danh sách nhân viên", "action": None },
-            "3": {"text": "Tìm nhân viên theo ID", "action": None },
-            "4": {"text": "Xóa nhân viên theo ID", "action": None },
-            "5": {"text": "Cập nhật thông tin nhân viên", "action": None },
-            "6": {"text": "Tìm nhân viên theo khoảng thu nhập", "action": None },
-            "7": {"text": "Sắp xếp nhân viên theo Tên", "action":None },
-            "8": {"text": "Sắp xếp nhân viên theo Thu nhập", "action": None },
-            "9": {"text": "Hiển thị 5 nhân viên có thu nhập cao nhất", "action": None },
-            "0": {"text": "Thoát chương trình", "action": self._exit_program },
+            "1": {"text": "Nhập thông tin nhân viên", "action": self.menu_handler.add_employee},
+            "2": {"text": "Xuất danh sách nhân viên", "action": self.menu_handler.show_all_employees},
+            "3": {"text": "Tìm nhân viên theo ID", "action": self.menu_handler.find_employee_by_id},
+            "4": {"text": "Xóa nhân viên theo ID", "action": self.menu_handler.delete_employee_by_id},
+            "5": {"text": "Cập nhật thông tin nhân viên", "action": self.menu_handler.update_employee},
+            "6": {"text": "Tìm nhân viên theo khoảng thu nhập", "action": self.menu_handler.find_employees_by_salary},
+            "7": {"text": "Sắp xếp nhân viên theo Tên", "action":self.menu_handler.sort_employees_by_name},
+            "8": {"text": "Sắp xếp nhân viên theo Thu nhập", "action": self.menu_handler.sort_employees_by_income},
+            "9": {"text": "Hiển thị 5 nhân viên có thu nhập cao nhất", "action": self.menu_handler.show_top_5_by_income},
+            "0": {"text": "Thoát chương trình", "action": self._exit_program},
         }
 
     def _display_menu(self):

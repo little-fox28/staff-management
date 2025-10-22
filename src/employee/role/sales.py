@@ -4,8 +4,9 @@ class SalesStaff(Employee):
     """Sales employee with commission based on sales amount."""
 
     def __init__(self, emp_id: str, full_name: str, basic_salary: float,
-                 department_id: str = None, sales_amount: float = 0.0, commission_rate: float = 0.0):
-        super().__init__(emp_id, full_name, basic_salary, department_id)
+                 sales_amount: float = 0.0, commission_rate: float = 0.0):
+        super().__init__(emp_id, full_name, basic_salary)
+        self.department_id = "SAL"
         self._sales_amount = sales_amount
         self._commission_rate = commission_rate
 
